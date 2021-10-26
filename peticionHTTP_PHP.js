@@ -1,7 +1,9 @@
 let ajax = async({...arg})=>{
     let peticion = await fetch(arg.url, arg.parametros);
-    let data = await peticion.json();
-    console.log(data);
+    let json = await peticion.json();
+    console.log(json);
+    alert(JSON.stringify(json, undefined, 12));
+    
 }
 
 
